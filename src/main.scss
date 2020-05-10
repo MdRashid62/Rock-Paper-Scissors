@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+@import '~bootstrap/scss/bootstrap';
+
+*,
+body,
+html {
+  /* border: 1px dotted red; */
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Tags Reset */
+h1,
+h2,
+h3 {
+  margin-bottom: 0px;
+}
+
+p {
+  user-select: none;
+}
+
+/* Margins */
+.mb-7 {
+  margin-bottom: 7em;
+}
+
+.mb-5 {
+  margin-bottom: 5em;
+}
+
+/* Header */
+.header h1 {
+  font-weight: bold;
+}
+
+.game-wrapper {
+  margin-top: 1em;
+}
+
+/* Label and Input */
+label {
+  font-size: 2em;
+}
+
+#round-input {
+  width: 300px;
+  margin: 0 auto;
+  border: 2px solid;
+}
+
+/* Bootstrap Buttons */
+.btn-lg {
+  border-radius: 50px;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  margin: 1rem auto;
+}
+
+/* Status Buttons Classes*/
+.win {
+  border: 4px solid #28a745 !important;
+}
+
+.lose {
+  border: 4px solid #dc3545 !important;
+}
+
+.draw {
+  border: 4px solid #dcc335 !important;
+}
+
+.win-text {
+  color: #28a745 !important;
+}
+
+.lose-text {
+  color: #dc3545 !important;
+}
+
+.draw-text {
+  color: #dcc335 !important;
+}
+
+/* Options Container */
+#options-wrapper .em {
+  height: 4em;
+  width: 4em;
+}
+
+#options-wrapper {
+  .card {
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    margin: 0 auto 20px auto;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.125);
+
+    &:hover {
+      transform: scale(0.9);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+  }
+}
+
+/* Points Container */
+#points-wrapper {
+  border: 2px solid rgba(0, 0, 0, 0.125);
+  border-radius: 10px;
+  margin-bottom: 5rem;
+}
+
+.border-right, .border-left {
+  border-right: 1px solid rgba(0, 0, 0, 0.125);
+  padding-top: 2rem;
+}
+
+.point {
+  font-size: 2em;
+}
+
+/* Instructions */
+.circle {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+#instruction-wrapper {
+  .card {
+    padding: 10px;
+    margin: 0px auto 20px auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &:hover {
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+  }
+}
+
+/* Links */
+.link-default {
+  color: #ffa600 !important;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    color: #b34800;
+    text-decoration: underline !important;
+  }
+}

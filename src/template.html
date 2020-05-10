@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rock, Paper or Scissors</title>
+  <!-- Emojis -->
+  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container game-wrapper">
+    <!-- Header -->
+    <div id="header" class="header text-center mb-7">
+      <h1 class="display-3">Rock, Paper or Scissor</h1>
+    </div>
+
+    <!-- Round Container -->
+    <div id="round-wrapper" style="display: none" class="text-center mb-4">
+      <h2 class="display-4">Round: <span id="round"></span></h2>
+    </div>
+
+    <!-- Buttons Option Container -->
+    <div id="options-wrapper" style="display: none" class="container-fluid text-center mb-4">
+      <div class="row">
+        <div class="col-md-4">
+          <div id="rock-border" class="card"><i id="rock" class="em em-facepunch"></i></div>
+        </div>
+        <div class="col-md-4">
+          <div id="paper-border" class="card"><i id="paper" class="em em-raised_hand_with_fingers_splayed"></i></div>
+        </div>
+        <div class="col-md-4">
+          <div id="scissor-border" class="card"><i id="scissor" class="em em-v"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buttons Wrapper -->
+    <div id="buttons-wrapper" class="container-fluid text-center mb-4">
+      <div class="form-group">
+        <label for="round-input">How many rounds want to play?</label>
+        <input id="round-input" type="number" class="form-control" placeholder="Enter a number">
+      </div>
+      <button style="display: none; margin: 1rem auto" id="next-round-btn" class="btn btn-outline-primary btn-lg">Next
+        Round
+      </button>
+    </div>
+
+    <!-- Message -->
+    <div class="container-fluid text-center mb-4">
+      <h3 id="final-message"></h3>
+    </div>
+
+    <!-- Points Wrapper -->
+    <div id="points-wrapper" style="display: none" class="container-fluid text-center">
+      <div class="row">
+        <div class="col-md-6 border-right">
+          <h3>You</h3>
+          <p id="usr-point" class="point"></p>
+        </div>
+        <div class="col-md-6 border-left">
+          <h3>Computer</h3>
+          <p id="cpu-point" class="point"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Start Button -->
+    <div id="start-btn" class="container-fluid text-center mb-7">
+      <button style="display: block" class="btn btn-outline-dark btn-lg">Start</button>
+    </div>
+
+    <!-- Restart Button -->
+    <div id="restart-btn" class="container-fluid text-center">
+      <button style="display: none" style="margin: 0 auto 2em auto" class="btn btn-outline-warning btn-lg">Restart
+        Game</button>
+    </div>
+
+    <!-- Instruction Wrapper -->
+    <div id="instruction-wrapper" class="container-fluid text-center mb-4">
+      <h3>
+        <a class="link-default" data-toggle="modal" data-target="#gameGuide">Game Guide</a> -
+        <a target="_blank" href="https://en.wikipedia.org/wiki/Rock%E2%80%93paper%E2%80%93scissors">Instructions</a>
+      </h3>
+    </div>
+
+    <!-- Footer -->
+    <div class="container text-center">
+      <p>
+        Created by <a target="_blank" href="http://github.com/MdRashid62/"> Muhammad Rashid</a>
+      </p>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="gameGuide" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Game Guide</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row text-center">
+              <div class="col-md-12">
+                <div class="circle win mb-2"></div>
+                <p>Green circle means that you win the round, the computer option shows in Red</p>
+              </div>
+              <div class="col-md-12">
+                <div class="circle draw mb-2"></div>
+                <p>Yellow circle means that you and the computer pick the same option!</p>
+              </div>
+              <div class="col-md-12">
+                <div class="circle lose mb-2"></div>
+                <p>Red circle means that you lose the round! the computer option shows in Green</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
